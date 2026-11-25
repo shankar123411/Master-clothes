@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Demo Admin Account (Configurable via ADMIN_EMAIL / ADMIN_PASSWORD env vars)
-        $adminEmail = env('ADMIN_EMAIL', 'admin@masterclothes.demo');
+        // Demo Admin Account (Configurable via ADMIN_ID / ADMIN_EMAIL & ADMIN_PASSWORD env vars)
+        $adminEmail = env('ADMIN_ID') ?: env('ADMIN_EMAIL', 'admin');
         $adminPassword = env('ADMIN_PASSWORD', 'admin123');
 
         User::updateOrCreate(

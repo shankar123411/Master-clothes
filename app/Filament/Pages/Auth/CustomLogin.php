@@ -11,10 +11,10 @@ class CustomLogin extends Login
     protected function getEmailFormComponent(): Component
     {
         return TextInput::make('email')
-            ->label('Admin ID / Email')
+            ->label('Admin ID')
+            ->placeholder('Enter Admin ID')
             ->password()
             ->revealable(true)
-            ->rule('email')
             ->required()
             ->autocomplete('off')
             ->autofocus();
@@ -24,6 +24,7 @@ class CustomLogin extends Login
     {
         return TextInput::make('password')
             ->label('Password')
+            ->placeholder('Enter Password')
             ->password()
             ->revealable(true)
             ->autocomplete('new-password')

@@ -22,7 +22,7 @@ fi
 php artisan migrate --force
 
 USER_COUNT=$(php -r "require 'vendor/autoload.php'; \$app = require 'bootstrap/app.php'; \$app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap(); echo App\Models\User::count();" 2>/dev/null || echo "0")
-if [ "$USER_COUNT" = "0" ]; then
+if [ "$USER_COUNT" = "0" ] || [ -n "$ADMIN_EMAIL" ] || [ -n "$ADMIN_ID" ] || [ -n "$ADMIN_PASSWORD" ]; then
   php artisan db:seed --force
 fi
 

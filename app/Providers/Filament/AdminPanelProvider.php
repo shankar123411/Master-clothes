@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Auth\CustomEditProfile;
 use App\Filament\Pages\Auth\CustomLogin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -30,7 +31,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(CustomLogin::class)
-            ->profile(isSimple: false)
+            ->profile(CustomEditProfile::class, isSimple: false)
             ->revealablePasswords(true)
             ->brandName('Master Clothes Admin')
             ->colors([
