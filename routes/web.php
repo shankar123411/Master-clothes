@@ -16,7 +16,7 @@ Route::get('/orders/{id}/print', function ($id) {
 Route::get('/orders/{id}/pdf', function ($id) {
     $order = Order::findOrFail($id);
     $pdf = Pdf::loadView('orders.pdf', compact('order'));
-    $fileName = 'NovaApparel_Order_Slip_' . $order->order_id . '.pdf';
+    $fileName = 'MasterClothes_Order_Slip_' . $order->order_id . '.pdf';
     
     if (request()->has('download')) {
         return $pdf->download($fileName);

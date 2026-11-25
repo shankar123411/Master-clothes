@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaApparel Admin — Wholesale Apparel & Order Portal</title>
+    <title>Master Clothes Admin — Wholesale Apparel & Order Portal</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -36,10 +36,10 @@
     <main class="container">
         <section class="hero">
             <div class="brand-row">
-                <div class="badge-logo">N</div>
+                <div class="badge-logo">M</div>
                 <span class="pill">Laravel 12 • Filament 5 • DomPDF</span>
             </div>
-            <h1>NovaApparel Wholesale Admin Portal</h1>
+            <h1>Master Clothes Wholesale Admin Portal</h1>
             <p class="sub">
                 Enterprise B2B wholesale order booking, product catalog, color swatch &amp; size matrix management, retailer directory, and automated A4 PDF Order Slip generation.
             </p>

@@ -18,9 +18,9 @@ class DatabaseSeeder extends Seeder
     {
         // Demo Admin Account
         User::updateOrCreate(
-            ['email' => 'admin@novaapparel.demo'],
+            ['email' => 'admin@masterclothes.demo'],
             [
-                'name' => 'NovaApparel Admin',
+                'name' => 'Master Clothes Admin',
                 'password' => Hash::make('admin123'),
             ]
         );
@@ -134,7 +134,7 @@ class DatabaseSeeder extends Seeder
         // Sample Wholesale Orders (Ready for Order Slip, Print & PDF Demo)
         $orders = [
             [
-                'order_id' => 'NA-1001',
+                'order_id' => 'MC-1001',
                 'customer_name' => 'Arun Kumar',
                 'business_name' => 'Apex Textiles Hub',
                 'phone' => '9000000001',
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
                 ],
             ],
             [
-                'order_id' => 'NA-1002',
+                'order_id' => 'MC-1002',
                 'customer_name' => 'Divya S',
                 'business_name' => 'Aura Fashion Store',
                 'phone' => '9000000004',
@@ -158,7 +158,7 @@ class DatabaseSeeder extends Seeder
                 ],
             ],
             [
-                'order_id' => 'NA-1003',
+                'order_id' => 'MC-1003',
                 'customer_name' => 'Karthik N',
                 'business_name' => 'Metro Apparel Mart',
                 'phone' => '9000000002',

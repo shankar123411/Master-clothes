@@ -73,7 +73,7 @@ class Order extends Model
         static::creating(function ($order) {
             if (empty($order->order_id)) {
                 $maxId = static::max('id') ?: 0;
-                $order->order_id = 'NA-' . (1001 + $maxId);
+                $order->order_id = 'MC-' . (1001 + $maxId);
             }
         });
     }

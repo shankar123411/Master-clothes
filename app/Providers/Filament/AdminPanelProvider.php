@@ -30,7 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->profile()
-            ->brandName('NovaApparel Admin')
+            ->brandName('Master Clothes Admin')
             ->colors([
                 'primary' => Color::Pink,
             ])

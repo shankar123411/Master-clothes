@@ -23,7 +23,7 @@
 
     $orderDate = $order->created_at ? $order->created_at->timezone('Asia/Kolkata')->format('d M Y, h:i A') : date('d M Y, h:i A');
 
-    $waText = "🛍️ *NOVAAPPAREL WHOLESALE - ORDER SLIP*\n";
+    $waText = "🛍️ *MASTER CLOTHES - WHOLESALE ORDER SLIP*\n";
     $waText .= "-------------------------------------------\n";
     $waText .= "📋 *Order ID:* " . $order->order_id . "\n";
     $waText .= "📅 *Date:* " . $orderDate . "\n";
@@ -41,7 +41,7 @@
     $waText .= "-------------------------------------------\n";
     $waText .= "✨ *TOTAL QUANTITY:* *{$totalPcs} Pcs*\n";
     $waText .= "-------------------------------------------\n";
-    $waText .= "Thank you for doing business with *NovaApparel Wholesale*! 🙏";
+    $waText .= "Thank you for doing business with *Master Clothes*! 🙏";
     $waMessage = $waText;
 @endphp
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaApparel_Order_Slip_{{ $order->order_id }}</title>
+    <title>MasterClothes_Order_Slip_{{ $order->order_id }}</title>
     <style>
         *, *::before, *::after {
             box-sizing: border-box !important;
@@ -360,7 +360,7 @@
     <!-- Action Bar for Screen View -->
     <div class="print-toolbar">
         <div>
-            <strong style="color: #db2777; font-size: 14px;">NovaApparel Wholesale Order Slip</strong>
+            <strong style="color: #db2777; font-size: 14px;">Master Clothes Wholesale Order Slip</strong>
             <span style="color: #64748b; font-size: 13px; margin-left: 8px;">Order: {{ $order->order_id }}</span>
         </div>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -380,8 +380,8 @@
                 <tr>
                     <td style="vertical-align: top; width: 56%; padding-right: 8px;">
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span class="viwin-emblem-badge">N</span>
-                            <span class="viwin-brand-title">NOVAAPPAREL</span>
+                            <span class="viwin-emblem-badge">M</span>
+                            <span class="viwin-brand-title">MASTER CLOTHES</span>
                         </div>
                         <p style="margin: 4px 0 0 0; font-size: 12px; font-weight: 700; color: #db2777; text-transform: uppercase; letter-spacing: 0.4px;">
                             Premium 4-Way Stretch Apparel • Wholesale Order Slip
@@ -477,11 +477,11 @@
                         <strong style="color: #0f172a;">Order Notes & Terms:</strong><br>
                         • Verify garment items, sizes, and colors upon delivery.<br>
                         • Any issues must be intimated within 48 hours.<br>
-                        <span style="color: #db2777; font-weight: 700;">NovaApparel Wholesale — B2B Apparel Distribution</span>
+                        <span style="color: #db2777; font-weight: 700;">Master Clothes — B2B Wholesale Apparel Distribution</span>
                     </div>
                 </td>
                 <td style="width: 40%; text-align: right; padding-top: 6px;">
-                    <div style="font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 28px;">For NOVAAPPAREL WHOLESALE</div>
+                    <div style="font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 28px;">For MASTER CLOTHES</div>
                     <div style="font-size: 11px; color: #64748b; border-top: 1px solid #cbd5e1; display: inline-block; padding-top: 3px; min-width: 150px; text-align: center;">
                         Authorized Signature
                     </div>
@@ -527,7 +527,7 @@ function downloadOrderSlipPdf() {
     const downloadUrl = '/orders/{{ $order->id }}/pdf?download=1';
     const a = document.createElement('a');
     a.href = downloadUrl;
-    a.download = 'NovaApparel_Order_Slip_{{ $order->order_id }}.pdf';
+    a.download = 'MasterClothes_Order_Slip_{{ $order->order_id }}.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

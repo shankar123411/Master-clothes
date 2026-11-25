@@ -1,4 +1,4 @@
-# NovaApparel Admin — Enterprise B2B Wholesale Operations Portal
+# Master Clothes Admin — Enterprise B2B Wholesale Operations Portal
 
 A full-stack wholesale apparel operations & order management portal built with **Laravel 12**, **Filament 5**, **Livewire**, **SQLite**, and **DomPDF**.
 
@@ -23,7 +23,7 @@ php artisan serve
 2. **Environment / Language:** `Docker` (auto-detected from `Dockerfile`).
 3. **Health Check Path:** `/up`
 4. **Environment Variables:**
-   - `APP_NAME` = `NovaApparel Admin`
+   - `APP_NAME` = `Master Clothes Admin`
    - `APP_ENV` = `production`
    - `APP_DEBUG` = `false`
    - `APP_URL` = `https://<your-service>.onrender.com`
@@ -32,5 +32,5 @@ php artisan serve
 
 ## Demo Admin Login
 - **URL:** `/admin`
-- **Email:** `admin@novaapparel.demo`
+- **Email:** `admin@masterclothes.demo`
 - **Password:** `admin123`

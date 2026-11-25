@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>NovaApparel_Order_Slip_{{ $order->order_id }}</title>
+    <title>MasterClothes_Order_Slip_{{ $order->order_id }}</title>
     <style>
         @page {
             margin: 15mm 12mm 15mm 12mm;
@@ -203,10 +203,10 @@
                 <table style="width: auto;">
                     <tr>
                         <td style="width: 40px; vertical-align: middle;">
-                            <div class="brand-badge">N</div>
+                            <div class="brand-badge">M</div>
                         </td>
                         <td style="vertical-align: middle;">
-                            <span class="brand-title">NOVAAPPAREL WHOLESALE</span>
+                            <span class="brand-title">MASTER CLOTHES</span>
                         </td>
                     </tr>
                 </table>
@@ -295,11 +295,11 @@
                     <strong style="color: #0f172a;">Order Notes & Terms:</strong><br>
                     • Verify garment items, sizes, and colors upon delivery.<br>
                     • Any discrepancies must be intimated within 48 hours.<br>
-                    <span style="color: #db2777; font-weight: bold;">NovaApparel Wholesale — B2B Apparel Distribution</span>
+                    <span style="color: #db2777; font-weight: bold;">Master Clothes — B2B Wholesale Apparel Distribution</span>
                 </div>
             </td>
             <td style="width: 40%;">
-                <div class="sig-label">For NOVAAPPAREL WHOLESALE</div>
+                <div class="sig-label">For MASTER CLOTHES</div>
                 <div class="sig-line">Authorized Signature</div>
             </td>
         </tr>

@@ -30,7 +30,7 @@
 
         $orderDate = $orderRecord->created_at ? $orderRecord->created_at->timezone('Asia/Kolkata')->format('d M Y, h:i A') : date('d M Y, h:i A');
 
-        $waText = "🛍️ *NOVAAPPAREL WHOLESALE - ORDER SLIP*\n";
+        $waText = "🛍️ *MASTER CLOTHES - WHOLESALE ORDER SLIP*\n";
         $waText .= "-------------------------------------------\n";
         $waText .= "📋 *Order ID:* " . $orderRecord->order_id . "\n";
         $waText .= "📅 *Date:* " . $orderDate . "\n";
@@ -48,7 +48,7 @@
         $waText .= "-------------------------------------------\n";
         $waText .= "✨ *TOTAL QUANTITY:* *{$totalPcs} Pcs*\n";
         $waText .= "-------------------------------------------\n";
-        $waText .= "Thank you for doing business with *NovaApparel Wholesale*! 🙏";
+        $waText .= "Thank you for doing business with *Master Clothes*! 🙏";
         $waMessage = $waText;
     }
 @endphp
@@ -364,8 +364,8 @@
             <tr>
                 <td style="vertical-align: top; width: 56%; padding-right: 8px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span class="viwin-emblem-badge">N</span>
-                        <span class="viwin-brand-title">NOVAAPPAREL</span>
+                        <span class="viwin-emblem-badge">M</span>
+                        <span class="viwin-brand-title">MASTER CLOTHES</span>
                     </div>
                     <p style="margin: 4px 0 0 0; font-size: 11.5px; font-weight: 700; color: #db2777; text-transform: uppercase; letter-spacing: 0.4px;">
                         Premium 4-Way Stretch Apparel • Wholesale Order Slip
@@ -498,13 +498,13 @@
                 btn.disabled = true;
             }
 
-            const orderId = '{{ $orderRecord ? $orderRecord->order_id : "NA-ORDER" }}';
+            const orderId = '{{ $orderRecord ? $orderRecord->order_id : "MC-ORDER" }}';
             const orderDbId = '{{ $orderRecord ? $orderRecord->id : "" }}';
 
             const downloadUrl = '/orders/' + orderDbId + '/pdf?download=1';
             const a = document.createElement('a');
             a.href = downloadUrl;
-            a.download = 'NovaApparel_Order_Slip_' + orderId + '.pdf';
+            a.download = 'MasterClothes_Order_Slip_' + orderId + '.pdf';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
