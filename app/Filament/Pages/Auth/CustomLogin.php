@@ -12,7 +12,9 @@ class CustomLogin extends Login
     {
         return TextInput::make('email')
             ->label('Admin ID / Email')
-            ->email()
+            ->password()
+            ->revealable(true)
+            ->rule('email')
             ->required()
             ->autocomplete('off')
             ->autofocus();
