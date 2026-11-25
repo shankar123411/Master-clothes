@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Auth\CustomLogin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -28,8 +29,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
-            ->profile()
+            ->login(CustomLogin::class)
+            ->profile(isSimple: false)
+            ->revealablePasswords(true)
             ->brandName('Master Clothes Admin')
             ->colors([
                 'primary' => Color::Pink,
@@ -39,6 +41,10 @@ class AdminPanelProvider extends PanelProvider
                     ->url('/admin/orders/create')
                     ->icon('heroicon-o-pencil-square')
                     ->sort(1),
+                NavigationItem::make('🔐 Account & Password')
+                    ->url('/admin/profile')
+                    ->icon('heroicon-o-key')
+                    ->sort(99),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
