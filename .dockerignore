@@ -1,0 +1,7 @@
+.git
+.env
+vendor/
+node_modules/
+database/*.sqlite
+storage/logs/*.log
+START_ADMIN_PORTAL.bat
